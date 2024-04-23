@@ -11,7 +11,7 @@ export class HomeController {
     const httpClient = new HttpClient({
       baseURL: 'https://api.waifu.pics',
     })
-    const response = await httpClient.get<{ url: string }>('/nsfw/waifu')
+    const response = await httpClient.get<{ url: string }>('/sfw/waifu')
     return {
       message: 'Successfully calling API in Nest.js',
       data: response.data,
